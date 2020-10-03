@@ -15,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: Windows
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -33,4 +33,4 @@ jobs:
         run: npm install --global surge
       
       - name: deploying using surge
-        run: surge ./ awais-territory.surge.sh --token $ {{ secrets.Surge_Token}}
+        run: surge ./ awais-territory.surge.sh --token $ {{ secrets.SURGE_TOKEN }}
